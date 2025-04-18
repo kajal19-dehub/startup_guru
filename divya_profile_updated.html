@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divya Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .orbit-container {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+
+    .orbit-logo {
+      border-radius: 9999px;
+      border: 2px solid white;
+      z-index: 10;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 64px;
+      height: 64px;
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: rotateOrbit 2s linear infinite;
+    }
+
+    @keyframes rotateOrbit {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hover-upcoming:hover {
+      background-color: #22c55e; /* green */
+      color: white;
+    }
+
+    .hover-past:hover {
+      background-color: #ef4444; /* red */
+      color: white;
+    }
+    
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 bg-gray-900 shadow-lg fixed top-0 w-full z-50">
+    <div class="flex items-center gap-4">
+      <div class="orbit-container">
+        <div class="orbit-ring"></div>
+        <img src="app_icon.png" alt="Logo" class="w-12 h-12 orbit-logo shadow-md"/>
+      </div>
+      <h1 class="text-3xl font-extrabold tracking-wide">
+        <span class="text-gray-300">Startup.</span><span class="text-yellow-400">Guru</span>
+      </h1>
+    </div>
+
+    <div class="flex items-center gap-6 text-xl">
+      <i class="fa-solid fa-bell hover:text-green-400 cursor-pointer transition"></i>
+      <i class="fa-solid fa-message hover:text-blue-400 cursor-pointer transition"></i>
+      <div class="w-10 h-10 bg-yellow-500 text-black font-bold rounded-full flex items-center justify-center">DK</div>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <main class="pt-24 px-6 max-w-7xl mx-auto">
+    <section class="bg-gradient-to-br from-blue-600/20 via-black to-red-500/20   border border-white/20 rounded-2xl p-6 md:flex gap-10 backdrop-blur-md shadow-lg">
+      <img src="divya_photo.jpeg" alt="Divya Kumari" class="rounded-full w-72 h-72 object-cover shadow-md mx-auto md:mx-0">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-2">Divya Kumari</h2>
+        <p class="text-lg mb-4 text-gray-300">Full Stack Web Developer | Founder of Startup.Guru | Ex-Navodayan</p>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center">
+            <i class="fa-solid fa-building text-green-400 mr-3"></i>
+            <p>Startup.Guru Pvt. Ltd</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-briefcase text-blue-400 mr-3"></i>
+            <p>2+ Years Experience</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-location-dot text-red-400 mr-3"></i>
+            <p>Lovely Professional University, Punjab</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-2">I can help with:</h3>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1 bg-gray-800 border border-white/20 rounded-full">Fund Raising</span>
+          <span class="px-3 py-1 bg-gray-800 border border-white/20 rounded-full">Marketing Strategies</span>
+          <span class="px-3 py-1 bg-gray-800 border border-white/20 rounded-full">Motivational Coaching</span>
+          <span class="px-3 py-1 bg-gray-800 border border-white/20 rounded-full">Entrepreneurship</span>
+          <span class="px-3 py-1 bg-gray-800 border border-white/20 rounded-full">Startup Idea Validation</span>
+        </div>
+
+        <p class="text-gray-400 mt-6 italic">"I’m happy to help entrepreneurs with their growth journey and problem solving."</p>
+
+        <!-- Call Options, Booking, Social -->
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+
+          <!-- Call Charges -->
+          <div class="bg-gradient-to-tr from-black via-gray-800 to-gray-900 rounded-xl p-4 shadow-md">
+            <div class="flex justify-around text-center">
+              <div>
+                <div class="rounded-full border-2 border-green-400 w-12 h-12 flex items-center justify-center bg-black mx-auto">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <p class="mt-2 text-sm">₹30K</p>
+              </div>
+              <div>
+                <div class="rounded-full border-2 border-blue-400 w-12 h-12 flex items-center justify-center bg-black mx-auto">
+                  <i class="fas fa-video"></i>
+                </div>
+                <p class="mt-2 text-sm">₹50K</p>
+              </div>
+              <div>
+                <div class="rounded-full border-2 border-orange-400 w-12 h-12 flex items-center justify-center bg-black mx-auto">
+                  <i class="fas fa-comment"></i>
+                </div>
+                <p class="mt-2 text-sm">₹40K</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Available Time -->
+          <div class="bg-gradient-to-tr from-black via-gray-800 to-gray-900 rounded-xl p-4 shadow-md text-center">
+            <p class="text-sm mb-2">Next Available At</p>
+            <div class="flex justify-center items-center text-xs mb-3">
+              <i class="fa-solid fa-calendar-days mr-2"></i> 9:15 PM - 15th April
+            </div>
+            <a href="book_button.html">
+            <button id="bookBtn" class="bg-green-700 text-white py-2 px-6 rounded-lg hover:scale-105 transition">Book Now
+            </button>
+          </a>
+            <p id="bookingMessage" class="mt-2 text-green-400 font-semibold hidden">Call booked successfully!</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="bg-gradient-to-tr from-black via-gray-800 to-gray-900 rounded-xl p-4 shadow-md text-center">
+            <p class="text-sm">Social Media Links</p>
+            <div class="flex justify-center gap-6 text-xl mt-6">
+              <i class="fa-brands fa-square-facebook hover:text-blue-400 cursor-pointer"></i>
+              <i class="fa-brands fa-square-instagram hover:text-pink-500 cursor-pointer"></i>
+              <i class="fa-brands fa-linkedin hover:text-blue-500 cursor-pointer"></i>
+              <i class="fa-brands fa-x-twitter hover:text-white cursor-pointer"></i>
+              <i class="fa-brands fa-youtube hover:text-red-600 cursor-pointer"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Confirmation Card -->
+        <div id="bookingCard" class="mt-6 hidden bg-gray-800 p-4 rounded-lg">
+          <h3 class="text-lg font-bold">Booking Confirmed!</h3>
+          <p class="text-sm">You have booked a call with <span id="mentorName"></span> on <span id="bookingDate"></span> at <span id="bookingTime"></span>.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function confirmBooking() {
+      return confirm("Do you want to confirm the call booking with Divya Kumari?");
+    }
+
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      if (confirmBooking()) {
+        // Prepare booking data
+        const booking = {
+          mentor: "Divya Kumari",
+          date: "15th April",
+          time: "9:15 PM",
+          timestamp: new Date().toISOString()
+        };
+
+        // Get existing bookings from localStorage or initialize empty array
+        let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+        // Add new booking
+        bookings.push(booking);
+
+        // Save back to localStorage
+        localStorage.setItem('bookings', JSON.stringify(bookings));
+
+        // Show success message
+        const messageEl = document.getElementById('bookingMessage');
+        messageEl.classList.remove('hidden');
+
+        // Show booking confirmation card
+        document.getElementById('mentorName').textContent = booking.mentor;
+        document.getElementById('bookingDate').textContent = booking.date;
+        document.getElementById('bookingTime').textContent = booking.time;
+        document.getElementById('bookingCard').classList.remove('hidden');
+
+        // Disable the button to prevent multiple bookings
+        this.disabled = true;
+        this.textContent = "Booked";
+
+        // Redirect to booked calls page after a delay
+        setTimeout(() => {
+          window.location.href = "upcoming_call.html";
+        }, 1500);
+      }
+    });
+  </script>
+
+</body>
+</html>

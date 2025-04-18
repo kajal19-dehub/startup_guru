@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup.Guru - Your Guide to Entrepreneurial Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0a0a2a',
+                        'dark-blue': '#121242',
+                        'electric-blue': '#0066ff',
+                        'vivid-red': '#ff355e',
+                        'dark-red': '#cc2a49',
+                        'black': '#000000',
+                        'light-gray': '#f5f5f5',
+                        'white': '#ffffff',
+                    },
+                    backgroundImage: {
+                        'gradient': 'linear-gradient(135deg, #0066ff 0%, #0a0a2a 50%, #000000 100%)',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow-red {
+                text-shadow: 0 0 10px rgba(255, 53, 94, 0.5);
+            }
+            .drop-shadow-heavy {
+                filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+            }
+        }
+    </style>
+</head>
+<body class="bg-light-gray text-black overflow-x-hidden">
+    <!-- Header -->
+    <header id="header" class="bg-gradient text-white py-4 px-[5%] fixed w-full top-0 z-50 shadow-lg transition-all duration-300">
+        <div class="header-container flex justify-between items-center max-w-[1400px] mx-auto">
+            <a href="#" class="logo flex items-center text-3xl font-bold text-white no-underline">
+                <i class="fas fa-bolt text-electric-blue mr-2.5 text-4xl"></i>
+                Startup.<span class="text-vivid-red">Guru</span>
+            </a>
+            
+            <nav id="nav" class="hidden md:block">
+                <ul class="flex list-none">
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">Features</a></li>
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">Resources</a></li>
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">Pricing</a></li>
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">About</a></li>
+                    <li class="ml-8"><a href="#" class="text-white no-underline font-medium transition-colors duration-300 relative hover:text-vivid-red after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-vivid-red after:transition-all after:duration-300 hover:after:w-full">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons hidden md:block">
+                <button class="btn login ml-4 py-2 px-5 rounded-full font-semibold cursor-pointer transition-all duration-300 bg-transparent text-white border-2 border-electric-blue hover:bg-electric-blue" id="loginBtn">Login</button>
+                <button class="btn signup ml-4 py-2 px-5 rounded-full font-semibold cursor-pointer transition-all duration-300 bg-vivid-red text-white border-2 border-vivid-red hover:bg-dark-red hover:border-dark-red" id="signupBtn">Sign Up</button>
+            </div>
+            
+            <div class="menu-toggle md:hidden text-2xl cursor-pointer" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero min-h-screen bg-gradient flex items-center px-[5%] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')] before:bg-cover before:bg-center before:opacity-10">
+        <div class="hero-content max-w-[600px] z-10 text-white">
+            <h1 class="text-5xl mb-6 leading-tight">Ignite Your Startup <span class="text-vivid-red text-shadow-red">Journey</span> With Expert Power</h1>
+            <p class="text-xl mb-8 opacity-90">Startup.Guru supercharges your entrepreneurial path with cutting-edge tools, dynamic resources, and explosive growth strategies. Join the revolution of successful founders.</p>
+            <div class="hero-buttons flex">
+                <button class="btn primary py-3 px-7 rounded-full font-semibold cursor-pointer transition-all duration-300 mr-4 text-base bg-vivid-red text-white border-2 border-vivid-red shadow-lg hover:bg-dark-red hover:border-dark-red hover:-translate-y-0.5 hover:shadow-xl" id="heroSignup">Launch Now</button>
+                <button class="btn secondary py-3 px-7 rounded-full font-semibold cursor-pointer transition-all duration-300 mr-4 text-base bg-transparent text-white border-2 border-white hover:bg-white/10 hover:-translate-y-0.5">Explore More</button>
+            </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Startup Team" class="hero-image absolute right-[5%] w-1/2 max-w-[700px] drop-shadow-heavy animate-float">
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features py-20 px-[5%] bg-white">
+        <div class="section-title text-center mb-12">
+            <h2 class="text-4xl text-deep-blue mb-4">Why Startup.Guru Accelerates Success</h2>
+            <p class="text-gray-600 text-xl max-w-[700px] mx-auto">We fuel your startup's growth with powerful tools and strategic advantages</p>
+        </div>
+        
+        <div class="features-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+            <div class="feature-card bg-white rounded-xl p-8 shadow-md transition-all duration-300 border border-gray-200 relative overflow-hidden hover:-translate-y-2.5 hover:shadow-lg before:content-[''] before:absolute before:top-0 before:left-0 before:w-1 before:h-full before:bg-vivid-red before:transition-all before:duration-300 hover:before:w-2">
+                <div class="feature-icon text-electric-blue text-4xl mb-6">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="text-2xl text-deep-blue mb-4">Rapid Scaling</h3>
+                <p class="text-gray-600 leading-relaxed">Our growth frameworks help you scale at unprecedented speed without losing control or vision.</p>
+            </div>
+            
+            <div class="feature-card bg-white rounded-xl p-8 shadow-md transition-all duration-300 border border-gray-200 relative overflow-hidden hover:-translate-y-2.5 hover:shadow-lg before:content-[''] before:absolute before:top-0 before:left-0 before:w-1 before:h-full before:bg-vivid-red before:transition-all before:duration-300 hover:before:w-2">
+                <div class="feature-icon text-electric-blue text-4xl mb-6">
+                    <i class="fas fa-chart-network"></i>
+                </div>
+                <h3 class="text-2xl text-deep-blue mb-4">Strategic Networks</h3>
+                <p class="text-gray-600 leading-relaxed">Access our exclusive network of investors, mentors, and potential partners who can propel your startup forward.</p>
+            </div>
+            
+            <div class="feature-card bg-white rounded-xl p-8 shadow-md transition-all duration-300 border border-gray-200 relative overflow-hidden hover:-translate-y-2.5 hover:shadow-lg before:content-[''] before:absolute before:top-0 before:left-0 before:w-1 before:h-full before:bg-vivid-red before:transition-all before:duration-300 hover:before:w-2">
+                <div class="feature-icon text-electric-blue text-4xl mb-6">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-2xl text-deep-blue mb-4">Intelligent Analytics</h3>
+                <p class="text-gray-600 leading-relaxed">AI-powered insights and predictive analytics to make smarter decisions and outperform competitors.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Login Modal -->
+    <div class="modal hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[2000] justify-center items-center opacity-0 transition-opacity duration-300" id="loginModal">
+        <div class="modal-content bg-white rounded-xl w-[90%] max-w-[450px] p-10 shadow-xl -translate-y-12 transition-transform duration-300 relative border-t-4 border-vivid-red">
+            <span class="close-modal absolute top-4 right-4 text-2xl text-gray-400 cursor-pointer transition-colors duration-300 hover:text-vivid-red">&times;</span>
+            <h2 class="text-center text-deep-blue mb-6 text-3xl">Welcome Back Founder</h2>
+            
+            <div class="form-group mb-6">
+                <label for="loginEmail" class="block text-deep-blue font-medium mb-2">Email Address</label>
+                <input type="email" id="loginEmail" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group mb-6">
+                <label for="loginPassword" class="block text-deep-blue font-medium mb-2">Password</label>
+                <input type="password" id="loginPassword" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Enter your password">
+            </div>
+            
+            <div class="form-actions mt-8">
+                <button id="loginSubmit" class="w-full py-3 bg-vivid-red text-white border-none rounded-md text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:bg-dark-red hover:-translate-y-0.5 active:translate-y-0">Launch Dashboard</button>
+            </div>
+            
+            <div class="form-footer text-center mt-6 text-gray-600">
+                <p>New to Startup.Guru? <a href="#" class="text-electric-blue font-medium no-underline hover:text-vivid-red hover:underline" id="switchToSignup">Create Account</a></p>
+                <p><a href="#" class="text-electric-blue font-medium no-underline hover:text-vivid-red hover:underline">Forgot password?</a></p>
+            </div>
+            
+            <div class="social-login my-6 text-center">
+                <p class="text-gray-600 mb-4 relative before:content-[''] before:absolute before:top-1/2 before:left-0 before:w-[30%] before:h-px before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-0 after:w-[30%] after:h-px after:bg-gray-300">Or login with</p>
+                <div class="social-icons flex justify-center gap-4">
+                    <div class="social-icon facebook w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #3b5998;">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-icon google w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #db4437;">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="social-icon linkedin w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #0077b5;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Signup Modal -->
+    <div class="modal hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[2000] justify-center items-center opacity-0 transition-opacity duration-300" id="signupModal">
+        <div class="modal-content bg-white rounded-xl w-[90%] max-w-[450px] p-10 shadow-xl -translate-y-12 transition-transform duration-300 relative border-t-4 border-vivid-red">
+            <span class="close-modal absolute top-4 right-4 text-2xl text-gray-400 cursor-pointer transition-colors duration-300 hover:text-vivid-red">&times;</span>
+            <h2 class="text-center text-deep-blue mb-6 text-3xl">Join the Revolution</h2>
+            
+            <div class="form-group mb-6">
+                <label for="signupName" class="block text-deep-blue font-medium mb-2">Full Name</label>
+                <input type="text" id="signupName" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group mb-6">
+                <label for="signupEmail" class="block text-deep-blue font-medium mb-2">Email Address</label>
+                <input type="email" id="signupEmail" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group mb-6">
+                <label for="signupPassword" class="block text-deep-blue font-medium mb-2">Password</label>
+                <input type="password" id="signupPassword" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Create a password (min 8 chars)">
+            </div>
+            
+            <div class="form-group mb-6">
+                <label for="signupConfirm" class="block text-deep-blue font-medium mb-2">Confirm Password</label>
+                <input type="password" id="signupConfirm" class="w-full py-3 px-4 border border-gray-300 rounded-md text-base transition-colors duration-300 focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/20" placeholder="Confirm your password">
+            </div>
+            
+            <div class="form-actions mt-8">
+                <button id="signupSubmit" class="w-full py-3 bg-vivid-red text-white border-none rounded-md text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:bg-dark-red hover:-translate-y-0.5 active:translate-y-0">Start My Journey</button>
+            </div>
+            
+            <div class="form-footer text-center mt-6 text-gray-600">
+                <p>Already revolutionizing? <a href="#" class="text-electric-blue font-medium no-underline hover:text-vivid-red hover:underline" id="switchToLogin">Login</a></p>
+            </div>
+            
+            <div class="social-login my-6 text-center">
+                <p class="text-gray-600 mb-4 relative before:content-[''] before:absolute before:top-1/2 before:left-0 before:w-[30%] before:h-px before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-0 after:w-[30%] after:h-px after:bg-gray-300">Or sign up with</p>
+                <div class="social-icons flex justify-center gap-4">
+                    <div class="social-icon facebook w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #3b5998;">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-icon google w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #db4437;">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="social-icon linkedin w-10 h-10 rounded-full flex items-center justify-center text-white text-xl cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:scale-110" style="background: #0077b5;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+                header.classList.add('bg-deep-blue/95');
+                header.classList.add('backdrop-blur-sm');
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.remove('py-2');
+                header.classList.add('py-4');
+                header.classList.remove('bg-deep-blue/95');
+                header.classList.remove('backdrop-blur-sm');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('hidden');
+        });
+        
+        // Modal Functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const heroSignup = document.getElementById('heroSignup');
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+        const closeModals = document.querySelectorAll('.close-modal');
+        const switchToSignup = document.getElementById('switchToSignup');
+        const switchToLogin = document.getElementById('switchToLogin');
+        
+        // Show Login Modal
+        loginBtn.addEventListener('click', function() {
+            loginModal.classList.remove('hidden');
+            loginModal.classList.add('flex');
+            loginModal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Show Signup Modal
+        signupBtn.addEventListener('click', function() {
+            signupModal.classList.remove('hidden');
+            signupModal.classList.add('flex');
+            signupModal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Hero Signup Button
+        heroSignup.addEventListener('click', function() {
+            signupModal.classList.remove('hidden');
+            signupModal.classList.add('flex');
+            signupModal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Close Modals
+        closeModals.forEach(btn => {
+            btn.addEventListener('click', function() {
+                loginModal.classList.add('hidden');
+                loginModal.classList.remove('flex');
+                loginModal.classList.remove('opacity-100');
+                signupModal.classList.add('hidden');
+                signupModal.classList.remove('flex');
+                signupModal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Switch between Login and Signup
+        switchToSignup.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.classList.add('hidden');
+            loginModal.classList.remove('flex');
+            loginModal.classList.remove('opacity-100');
+            signupModal.classList.remove('hidden');
+            signupModal.classList.add('flex');
+            signupModal.classList.add('opacity-100');
+        });
+        
+        switchToLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            signupModal.classList.add('hidden');
+            signupModal.classList.remove('flex');
+            signupModal.classList.remove('opacity-100');
+            loginModal.classList.remove('hidden');
+            loginModal.classList.add('flex');
+            loginModal.classList.add('opacity-100');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.classList.add('hidden');
+                loginModal.classList.remove('flex');
+                loginModal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === signupModal) {
+                signupModal.classList.add('hidden');
+                signupModal.classList.remove('flex');
+                signupModal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form Submission (example)
+        document.getElementById('loginSubmit').addEventListener('click', function() {
+            // Add your login logic here
+            alert('Login functionality would be implemented here');
+        });
+        
+        document.getElementById('signupSubmit').addEventListener('click', function() {
+            // Add your signup logic here
+            alert('Signup functionality would be implemented here');
+        });
+    </script>
+</body>
+</html>

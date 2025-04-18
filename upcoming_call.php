@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startup.Guru - Calls</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .orbit-container {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+    .orbit-logo {
+      border-radius: 9999px;
+      border: 2px solid white;
+      z-index: 10;
+    }
+    .orbit-ring {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 64px;
+      height: 64px;
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: rotateOrbit 2s linear infinite;
+    }
+    @keyframes rotateOrbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .tab-button.active {
+      background-color: #166534;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-------------------------- Header ------------------------------>
+  <header class="flex justify-between items-center p-4 bg-gray-900 fixed top-0 w-full z-50 shadow-md">
+    <div class="flex items-center gap-4">
+      <div class="orbit-container">
+        <div class="orbit-ring"></div>
+        <img src="app_icon.png" alt="Logo" class="w-12 h-12 orbit-logo shadow-md"/>
+      </div>
+      <h1 class="text-3xl font-bold">
+        <span class="text-gray-300">Startup.</span><span class="text-yellow-400">Guru</span>
+      </h1>
+    </div>
+    <div class="flex gap-6 items-center">
+      <i class="fa-solid fa-bell"></i>
+      <i class="fa-solid fa-message"></i>
+      <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold">DK</div>
+    </div>
+  </header>
+
+  <!-------------------------- Body ------------------------------>
+  <main class="mt-24 px-8">
+    <h1 class="text-4xl font-bold mb-2 mt-20">Your Calls</h1>
+    <p class="text-gray-300 mb-6">Track your upcoming and past mentorship or team sessions.</p>
+
+    <div class="flex gap-4 mb-6 mt-10">
+      <button onclick="showTab('upcoming')" id="upcomingBtn" class="tab-button border border-white/40 rounded-lg px-4 py-2 text-sm">Upcoming Calls</button>
+      <button onclick="showTab('past')" id="pastBtn" class="tab-button border border-white/40 rounded-lg px-4 py-2 text-sm">Past Calls</button>
+    </div>
+
+    <!-- Upcoming Calls -->
+    <div id="callCards" class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+
+    <div id="upcomingTab" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-blue-300/20 via-black to-green-300/20 rounded-2xl p-5 border hover:border-green-400 hover:shadow-lg hover:shadow-green-500 transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <img src="photo1.jpg" alt="Mentor" class="w-12 h-12 rounded-full border-2 border-green-400 mr-4"/>
+          <div>
+            <h2 class="text-lg font-bold text-white">Fund Raising</h2>
+            <p class="text-sm text-gray-400">with Ananya Sharma</p>
+          </div>
+        </div>
+        <p class="text-sm mb-1">📅 April 18, 2025</p>
+        <p class="text-sm">⏰ 10:00 AM - 11:00 AM</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-blue-300/20 via-black to-green-300/20 rounded-2xl p-5 border hover:border-green-400 hover:shadow-lg hover:shadow-green-500 transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <img src="photo2.jpg" alt="Mentor" class="w-12 h-12 rounded-full border-2 border-green-400 mr-4"/>
+          <div>
+            <h2 class="text-lg font-bold text-white">Mentorship Call</h2>
+            <p class="text-sm text-gray-400">with Alex Morgan</p>
+          </div>
+        </div>
+        <p class="text-sm mb-1">📅 April 20, 2025</p>
+        <p class="text-sm">⏰ 2:00 PM - 3:00 PM</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-blue-300/20 via-black to-green-300/20  rounded-2xl p-5 border hover:border-green-400 hover:shadow-lg hover:shadow-green-500 transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <img src="photo3.jpg" alt="Mentor" class="w-12 h-12 rounded-full border-2 border-green-400 mr-4"/>
+          <div>
+            <h2 class="text-lg font-bold text-white">Network Building</h2>
+            <p class="text-sm text-gray-400">with Priya Kapoor</p>
+          </div>
+        </div>
+        <p class="text-sm mb-1">📅 April 22, 2025</p>
+        <p class="text-sm">⏰ 5:00 PM - 5:45 PM</p>
+      </div>
+    </div>
+
+    <!-- Past Calls -->
+    <div id="pastTab" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 hidden mt-10">
+      <div class=" bg-gradient-to-br from-blue-600/20 to-red-700/20  rounded-2xl p-5 border hover:border-red-400 hover:shadow-lg hover:shadow-red-500 transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <img src="photo1.jpg" alt="Mentor" class="w-12 h-12 rounded-full border-2 border-red-800 mr-4"/>
+          <div>
+            <h2 class="text-lg font-bold text-white">Marketing Strategy Review</h2>
+            <p class="text-sm text-gray-400">with Ananya Sharma</p>
+          </div>
+        </div>
+        <p class="text-sm mb-1">📅 April 2, 2025</p>
+        <p class="text-sm">⏰ 11:00 AM - 12:00 PM</p>
+      </div>
+
+      <div class=" bg-gradient-to-br from-blue-600/20 to-red-700/20  rounded-2xl p-5 border  hover:border-red-400 hover:shadow-lg hover:shadow-red-500 transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <img src="photo2.jpg" alt="Mentor" class="w-12 h-12 rounded-full border-2 border-red-800 mr-4"/>
+          <div>
+            <h2 class="text-lg font-bold text-white">Funding Feedback Call</h2>
+            <p class="text-sm text-gray-400">with Alex Morgan</p>
+          </div>
+        </div>
+        <p class="text-sm mb-1">📅 April 5, 2025</p>
+        <p class="text-sm">⏰ 3:00 PM - 4:00 PM</p>
+      </div>
+    </div>
+  </main>
+
+  <!-------------------------- Script ------------------------------>
+  <script>
+    function showTab(tab) {
+      const upcoming = document.getElementById('upcomingTab');
+      const past = document.getElementById('pastTab');
+      const upcomingBtn = document.getElementById('upcomingBtn');
+      const pastBtn = document.getElementById('pastBtn');
+
+      if (tab === 'upcoming') {
+        upcoming.classList.remove('hidden');
+        past.classList.add('hidden');
+        upcomingBtn.classList.add('active');
+        pastBtn.classList.remove('active');
+      } else {
+        upcoming.classList.add('hidden');
+        past.classList.remove('hidden');
+        upcomingBtn.classList.remove('active');
+        pastBtn.classList.add('active');
+      }
+    }
+
+    // Default tab
+    showTab('upcoming');
+
+
+    //-----------------------------------add the booking call -------------------------------//
+
+  </script>
+
+</body>
+</html>
